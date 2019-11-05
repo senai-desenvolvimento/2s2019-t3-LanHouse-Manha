@@ -21,10 +21,8 @@ namespace Senai.LanHouse.Web.Razor.Contextos
         public virtual DbSet<Usuarios> Usuarios { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-           
-                optionsBuilder.UseSqlServer("Server=.\\SqlExpress;Database=Lan_House;integrated security=true");
-           
+        {  
+            optionsBuilder.UseSqlServer("Server=.\\SqlExpress;Database=Lan_House;integrated security=true");  
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
